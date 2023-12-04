@@ -487,22 +487,24 @@
                         <artifactId>maven-jxr-plugin</artifactId>
                         <version>2.1</version>
                     </plugin>
-		   <plugin>
-                       <groupId>org.codehaus.mojo</groupId>
-                       <artifactId>cobertura-maven-plugin</artifactId>
-                       <version>2.5.1</version>
+		    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>cobertura-maven-plugin</artifactId>
+                        <version>2.5.1</version>
                        <configuration>
                            <formats>
-                                <format>xml</format>
+                               <format>xml</format>
                            </formats>
                        </configuration>
-                       <execution>
-                            <phase>package</phase>
-                              <goals>
-                                    <goal>cobertura</goal>
-                              </goals>
-                       </execution>
-                  </plugin>
+                       <executions>
+                           <execution>
+                               <phase>package</phase>
+                               <goals>
+                                   <goal>cobertura</goal>
+                               </goals>
+                          </execution>
+                       </executions>
+                    </plugin>
                 </plugins>
             </reporting>
         </profile>
